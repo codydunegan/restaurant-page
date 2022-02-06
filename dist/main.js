@@ -110,6 +110,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/Contact.js":
+/*!************************!*\
+  !*** ./src/Contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _Global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Global */ \"./src/Global.js\");\n\n\n\nconst GenerateContactPage = () => {\n    /*\n    * HEADER\n    */\n    let header = (0,_Global__WEBPACK_IMPORTED_MODULE_0__.GenerateHeader)();\n\n    /*\n    * MAIN\n    */\n    let main = (0,_Global__WEBPACK_IMPORTED_MODULE_0__.GenerateMain)();\n    main.innerText = 'Contact Page';\n\n    /*\n    * FOOTER\n    */\n    let footer = (0,_Global__WEBPACK_IMPORTED_MODULE_0__.GenerateFooter)();\n\n    return { header, main, footer };\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GenerateContactPage);\n\n//# sourceURL=webpack://restaurant-page/./src/Contact.js?");
+
+/***/ }),
+
 /***/ "./src/Global.js":
 /*!***********************!*\
   !*** ./src/Global.js ***!
@@ -130,13 +140,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/Menu.js":
+/*!*********************!*\
+  !*** ./src/Menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _Global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Global */ \"./src/Global.js\");\n\n\n\nconst GenerateMenuPage = () => {\n    /*\n    * HEADER\n    */\n    let header = (0,_Global__WEBPACK_IMPORTED_MODULE_0__.GenerateHeader)();\n\n    /*\n    * MAIN\n    */\n    let main = (0,_Global__WEBPACK_IMPORTED_MODULE_0__.GenerateMain)();\n    main.innerText = 'Menu Page';\n\n    /*\n    * FOOTER\n    */\n    let footer = (0,_Global__WEBPACK_IMPORTED_MODULE_0__.GenerateFooter)();\n\n    return { header, main, footer };\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GenerateMenuPage);\n\n//# sourceURL=webpack://restaurant-page/./src/Menu.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home */ \"./src/Home.js\");\n\n\n\n\nlet content = document.querySelector(\"#content\");\n\nlet { header, main, footer } = (0,_Home__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\ncontent.appendChild(header);\ncontent.appendChild(main);\ncontent.appendChild(footer);\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home */ \"./src/Home.js\");\n/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Menu */ \"./src/Menu.js\");\n/* harmony import */ var _Contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Contact */ \"./src/Contact.js\");\n\n\n\n\n\nconst showHome = () => {\n    let { header, main, footer } = (0,_Home__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n    \n    showPage(header, main, footer);\n}\n\nconst showMenu = () => {\n    let { header, main, footer } = (0,_Menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n    \n    showPage(header, main, footer);\n}\n\nconst showContact = () => {\n    let { header, main, footer } = (0,_Contact__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n    \n    showPage(header, main, footer);\n}\n\nconst showPage = (header, main, footer) => {\n    content.innerText = '';\n    \n    content.appendChild(header);\n    content.appendChild(main);\n    content.appendChild(footer);\n\n    let homeBtn = document.querySelector(\"#homebtn\");\n    homeBtn.addEventListener('click', showHome);\n    \n    let menuBtn = document.querySelector(\"#menubtn\");\n    menuBtn.addEventListener('click', showMenu);\n    \n    let contactBtn = document.querySelector(\"#contactbtn\");\n    contactBtn.addEventListener('click', showContact);\n}\n\nlet content = document.querySelector(\"#content\");\n\nshowHome();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ }),
 
