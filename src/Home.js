@@ -3,12 +3,14 @@ import { GenerateFooter, GenerateHeader, GenerateMain } from './Global';
 
 const generateHourListItem = (day, hours) => {
     let li = document.createElement('li');
-    li.innerText = hours;
-
+    let opentimes = document.createTextNode(hours);
+    
     let strong = document.createElement('strong');
     strong.innerText = day;
-
+    
     li.appendChild(strong);
+    li.appendChild(opentimes);
+    
     return li;
 }
 
@@ -47,10 +49,10 @@ const GenerateHomePage = () => {
     hoursH3.innerText = 'Awesome Restaurant!';
 
     let list = document.createElement('ul');
-    let li1 = generateHourListItem('Mon - Thurs', '12:00pm - 10:00pm');
-    let li2 = generateHourListItem('Friday', '12:00pm - 12:00am');
-    let li3 = generateHourListItem('Saturday', '10:00am - 12:00am');
-    let li4 = generateHourListItem('Sunday', '8:00am - 10:00pm');
+    let li1 = generateHourListItem('Mon - Thurs:', ' 12:00pm - 10:00pm');
+    let li2 = generateHourListItem('Friday:', ' 12:00pm - 12:00am');
+    let li3 = generateHourListItem('Saturday:', ' 10:00am - 12:00am');
+    let li4 = generateHourListItem('Sunday:', ' 8:00am - 10:00pm');
 
     list.appendChild(li1);
     list.appendChild(li2);
